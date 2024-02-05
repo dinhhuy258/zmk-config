@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define BAS 0
 #define MED 1
 #define NAV 2
 #define MOU 3
@@ -18,7 +17,7 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
 
-#define HYPER &kp LC(LS(LA(LGUI)))
+#define HYPER LC(LS(LA(LGUI)))
 
 / {
         keymap {
@@ -36,8 +35,8 @@
                 //│             Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │          │
                     &none      &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH  &none
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &mo MED TAB  &mo NAV ESC  &mo MOU SPACE    &mo NUM ENTER &mo SYM BSPC  HYPER
-                //                           ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
+                                                &lt MED TAB &lt NAV ESC &lt MOU SPACE   &lt NUM ENTER &lt SYM BSPC &kp HYPER
+                //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
         };
