@@ -17,16 +17,19 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
 
-#define HYPER LC(LS(LA(LGUI)))
-#define HYPER(k) LC(LS(LA(LG(k))))
 #define XXX &none
-#define MED_TAB &lt MED TAB 
+#define HYPER_KEY &kp LC(LS(LA(LGUI)))
+#define HYPER(k) &kp LC(LS(LA(LG(k))))
+#define MED_TAB &lt MED TAB
 #define NAV_ESC &lt NAV ESC
 #define MOU_SPACE &lt MOU SPACE
 #define NUM_ENTER &lt NUM ENTER
 #define SYM_BSPC &lt SYM BSPC
 #define BRI_DOWN &kp C_BRI_DN
 #define BRI_UP &kp C_BRI_UP
+#define VOL_UP &kp C_VOL_UP
+#define VOL_DOWN &kp C_VOL_DN
+#define VOL_MUTE &kp C_MUTE
 #define BOOTLOADER &bootloader
 
 / {
@@ -56,9 +59,9 @@
                     XXX        HRML( A,         S,         D,         F)   &kp G          HRMR( H,         J,         K,         L)   &kp SEMI   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│             Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │          │
-                    XXX        &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH  XXX 
+                    XXX        &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     MED_TAB    NAV_ESC    MOU_SPACE      NUM_ENTER  SYM_BSPC   &kp HYPER
+                                                     MED_TAB    NAV_ESC    MOU_SPACE      NUM_ENTER  SYM_BSPC   HYPER_KEY
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
@@ -70,10 +73,10 @@
                    BOOTLOADER  XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX        XXX        XXX        XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│                     │          │          │Screenshot│          │   │          │ Vol up   │ Vol down │ Vol mute │          │          │
-                    XXX        XXX       BRI_DOWN    BRI_UP    HYPER(N4)   XXX            XXX        C_VOL_UP   C_VOL_DN   C_MUTE     XXX        XXX
+                    XXX        XXX       BRI_DOWN    BRI_UP    HYPER(N4)   XXX            XXX        VOL_UP     VOL_DOWN   VOL_MUTE   XXX        XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│                     │          │          │          │          │   │          │          │          │          │          │          │
-                    XXX        XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX        XXX        XXX        XXX 
+                    XXX        XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX        XXX        XXX        XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &trans     &trans     XXX
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
