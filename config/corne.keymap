@@ -14,9 +14,6 @@
 #define SYM 4
 #define NUM 5
 
-#define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
-#define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
-
 #define XXX &none
 #define HYPER_KEY &kp LC(LS(LA(LGUI)))
 #define HYPER(k) &kp LC(LS(LA(LG(k))))
@@ -31,6 +28,14 @@
 #define VOL_DOWN &kp C_VOL_DN
 #define VOL_MUTE &kp C_MUTE
 #define BOOTLOADER &bootloader
+#define UNDO &kp C_AC_UNDO
+#define REDO &kp C_AC_REDO
+#define PASTE &kp C_AC_PASTE
+#define COPY &kp C_AC_COPY
+#define CUT &kp C_AC_CUT 
+
+#define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
+#define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
 
 / {
         behaviors {
@@ -55,10 +60,10 @@
                 //│          │  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │          │
                     XXX        &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P      XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│             A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ; :     │          │
+                //│          │  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ; :     │          │
                     XXX        HRML( A,         S,         D,         F)   &kp G          HRMR( H,         J,         K,         L)   &kp SEMI   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│             Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │          │
+                //│          │  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │          │
                     XXX        &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      MED_TAB    NAV_ESC    MOU_SPACE      NUM_ENTER  SYM_BSPC   HYPER_KEY
@@ -72,13 +77,30 @@
                 //│ Reset    │          │          │          │          │          │   │          │          │          │          │          │          │
                    BOOTLOADER  XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX        XXX        XXX        XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│                     │          │          │Screenshot│          │   │          │ Vol up   │ Vol down │ Vol mute │          │          │
+                //│          │          │          │          │Screenshot│          │   │          │ Vol up   │ Vol down │ Vol mute │          │          │
                     XXX        XXX       BRI_DOWN    BRI_UP    HYPER(N4)   XXX            XXX        VOL_UP     VOL_DOWN   VOL_MUTE   XXX        XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│                     │          │          │          │          │   │          │          │          │          │          │          │
+                //│          │          │          │          │          │          │   │          │          │          │          │          │          │
                     XXX        XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX        XXX        XXX        XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &trans     &trans     XXX
+                //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+                    >;
+                };
+
+                navigation_layer {
+                    bindings = <
+                //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+                //│          │          │          │          │Vim leader│          │   │ Undo     │ Paste    │ Copy     │ Cut      │ Redo     │          │
+                    XXX        XXX        XXX        XXX        &kp SEMI   XXX            UNDO       PASTE      COPY       CUT        REDO       XXX
+                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                //│          │ Command    Alt      │ Control  │ Shift    │          │   │ Left     │ Down     │ Up       │ Right    │ Cmd + Tab│          │
+                    XXX        &ht LGUI   &ht LALT   &ht LCTRL  &ht LSHFT  XXX            LEFT       DOWN       UP         RIGHT      LG(TAB)    XXX
+                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                //│          │          │          │          │Tmux Pr...│          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
+                    XXX        XXX        XXX        XXX        LC(F)      XXX            &kp F23    LS(LEFT)   LS(RIGHT)  &kp F24    LG(GRAVE)  XXX
+                //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+                                                     &trans     &trans     &trans         &trans     &trans    &caps_word
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
