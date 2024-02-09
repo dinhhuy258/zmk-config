@@ -89,14 +89,14 @@
                     >;
                 };
 
-                navigation_layer {
+                navn_layer {
                     bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │Vim leader│          │   │ Undo     │ Paste    │ Copy     │ Cut      │ Redo     │          │
                     XXX        XXX        XXX        XXX        &kp SEMI   XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │ Command    Alt      │ Control  │ Shift    │          │   │ Left     │ Down     │ Up       │ Right    │ Cmd + Tab│          │
-                    XXX        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  XXX            LEFT       DOWN       UP         RIGHT      LG(TAB)    XXX
+                    XXX        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  XXX            &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  LG(TAB)    XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │Tmux Pr...│          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
                     XXX        XXX        XXX        XXX        LC(F)      XXX            &kp F23    LS(LEFT)   LS(RIGHT)  &kp F24    LG(GRAVE)  XXX
