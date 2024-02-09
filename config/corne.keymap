@@ -29,11 +29,11 @@
 #define VOL_DOWN &kp C_VOL_DN
 #define VOL_MUTE &kp C_MUTE
 #define BOOTLOADER &bootloader
-#define UNDO &kp C_AC_UNDO
-#define REDO &kp C_AC_REDO
-#define PASTE &kp C_AC_PASTE
-#define COPY &kp C_AC_COPY
-#define CUT &kp C_AC_CUT 
+#define MAC_UNDO &kp C_AC_UNDO
+#define MAC_REDO &kp C_AC_REDO
+#define MAC_PASTE &kp C_AC_PASTE
+#define MAC_COPY &kp C_AC_COPY
+#define MAC_CUT &kp C_AC_CUT 
 
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
@@ -93,7 +93,7 @@
                     bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │Vim leader│          │   │ Undo     │ Paste    │ Copy     │ Cut      │ Redo     │          │
-                    XXX        XXX        XXX        XXX        &kp SEMI   XXX            UNDO       PASTE      COPY       CUT        REDO       XXX
+                    XXX        XXX        XXX        XXX        &kp SEMI   XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │ Command    Alt      │ Control  │ Shift    │          │   │ Left     │ Down     │ Up       │ Right    │ Cmd + Tab│          │
                     XXX        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  XXX            LEFT       DOWN       UP         RIGHT      LG(TAB)    XXX
@@ -110,7 +110,7 @@
                     bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │          │          │   │ Undo     │ Paste    │ Copy     │ Cut      │ Redo     │          │
-                    XXX        XXX        XXX        XXX        XXX        XXX            UNDO       PASTE      COPY       CUT        REDO       XXX
+                    XXX        XXX        XXX        XXX        XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO       XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │ Max speed│ Low speed│ Med speed│          │   │Mouse left│Mouse down│ Mouse up │Mouse r...│ Cmd + Tab│          │
                     XXX        XXX      &kp LG(F14) &kp LG(F15) &kp LG(F16)    XXX      &kp LG(F24) &kp LG(F23) &kp LG(F22) &kp LG(F21) LG(TAB)  XXX
