@@ -5,8 +5,9 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define MED 1
 #define NAV 2
@@ -95,12 +96,29 @@
                     XXX        XXX        XXX        XXX        &kp SEMI   XXX            UNDO       PASTE      COPY       CUT        REDO       XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │ Command    Alt      │ Control  │ Shift    │          │   │ Left     │ Down     │ Up       │ Right    │ Cmd + Tab│          │
-                    XXX        &ht LGUI   &ht LALT   &ht LCTRL  &ht LSHFT  XXX            LEFT       DOWN       UP         RIGHT      LG(TAB)    XXX
+                    XXX        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  XXX            LEFT       DOWN       UP         RIGHT      LG(TAB)    XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │Tmux Pr...│          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
                     XXX        XXX        XXX        XXX        LC(F)      XXX            &kp F23    LS(LEFT)   LS(RIGHT)  &kp F24    LG(GRAVE)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &trans     &trans    &caps_word
+                //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+                    >;
+                };
+
+                mouse_layer {
+                    bindings = <
+                //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+                //│          │          │          │          │          │          │   │ Undo     │ Paste    │ Copy     │ Cut      │ Redo     │          │
+                    XXX        XXX        XXX        XXX        XXX        XXX            UNDO       PASTE      COPY       CUT        REDO       XXX
+                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                //│          │          │ Max speed│ Low speed│ Med speed│          │   │Mouse left│Mouse down│ Mouse up │Mouse r...│ Cmd + Tab│          │
+                    XXX        XXX      &kp LG(F14) &kp LG(F15) &kp LG(F16)    XXX      &kp LG(F24) &kp LG(F23) &kp LG(F22) &kp LG(F21) LG(TAB)  XXX
+                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                //│          │          │ Right alt│          │          │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
+                    XXX        XXX        RALT       XXX        XXX        XXX          &kp LG(F20) &kp LG(F19) &kp LG(F18) &kp LG(F17) LG(GRAVE) XXX
+                //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+                                                     &trans     &trans     &trans         &mkp LCLK &mkp RCLK  &mkp MCLK
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
