@@ -18,6 +18,9 @@
 #define XXX &none
 #define HYPER_KEY &kp LC(LS(LA(LGUI)))
 #define HYPER(k) &kp LC(LS(LA(LG(k))))
+#define LGK(k) &kp LG(k)
+#define LSK(k) &kp LS(k)
+#define LCK(k) &kp LC(k)
 #define MED_TAB &lt MED TAB
 #define NAV_ESC &lt NAV ESC
 #define MOU_SPACE &lt MOU SPACE
@@ -89,17 +92,17 @@
                     >;
                 };
 
-                navn_layer {
+                navigation_layer {
                     bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │Vim leader│          │   │ Undo     │ Paste    │ Copy     │ Cut      │ Redo     │          │
                     XXX        XXX        XXX        XXX        &kp SEMI   XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │ Command    Alt      │ Control  │ Shift    │          │   │ Left     │ Down     │ Up       │ Right    │ Cmd + Tab│          │
-                    XXX        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  XXX            &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  LG(TAB)    XXX
+                    XXX        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  XXX            &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  LGK(TAB)   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │Tmux Pr...│          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
-                    XXX        XXX        XXX        XXX        LC(F)      XXX            &kp F23    LS(LEFT)   LS(RIGHT)  &kp F24    LG(GRAVE)  XXX
+                    XXX        XXX        XXX        XXX        LCK(F)      XXX           &kp F23    LSK(LEFT)  LSK(RIGHT) &kp F24    LGK(GRAVE) XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &trans     &trans    &caps_word
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -110,13 +113,13 @@
                     bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │          │          │   │ Undo     │ Paste    │ Copy     │ Cut      │ Redo     │          │
-                    XXX        XXX        XXX        XXX        XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO       XXX
+                    XXX        XXX        XXX        XXX        XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │ Max speed│ Low speed│ Med speed│          │   │Mouse left│Mouse down│ Mouse up │Mouse r...│ Cmd + Tab│          │
-                    XXX        XXX      &kp LG(F14) &kp LG(F15) &kp LG(F16)    XXX      &kp LG(F24) &kp LG(F23) &kp LG(F22) &kp LG(F21) LG(TAB)  XXX
+                    XXX        XXX        LGK(F14)   LGK(F15)   LGK(F16)   XXX           LGK(F24)    LGK(F23)   LGK(F22)   LGK(F21)   LGK(TAB)   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │ Right alt│          │          │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
-                    XXX        XXX        RALT       XXX        XXX        XXX          &kp LG(F20) &kp LG(F19) &kp LG(F18) &kp LG(F17) LG(GRAVE) XXX
+                    XXX        XXX        RALT       XXX        XXX        XXX           LGK(F20)    LGK(F19)   LGK(F18)   LGK(F17)   LGK(GRAVE) XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &mkp LCLK &mkp RCLK  &mkp MCLK
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
