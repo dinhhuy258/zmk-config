@@ -17,7 +17,7 @@
 
 #define XXX &none
 #define HYPER_KEY &kp LC(LS(LA(LGUI)))
-#define K(k) &kp k
+#define KP(k) &kp k
 #define HYPER(k) &kp LC(LS(LA(LG(k))))
 #define LGK(k) &kp LG(k)
 #define LSK(k) &kp LS(k)
@@ -37,7 +37,7 @@
 #define MAC_REDO &kp C_AC_REDO
 #define MAC_PASTE &kp C_AC_PASTE
 #define MAC_COPY &kp C_AC_COPY
-#define MAC_CUT &kp C_AC_CUT 
+#define MAC_CUT &kp C_AC_CUT
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
 
@@ -62,13 +62,13 @@
                     bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │          │
-                    XXX        K(Q)       K(W)       K(E)       K(R)       K(T)           K(Y)       K(U)       K(I)       K(O)       K(P)       XXX
+                    XXX        KP(Q)      KP(W)      KP(E)      KP(R)      KP(T)          KP(Y)      KP(U)      KP(I)      KP(O)      KP(P)      XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ; :     │          │
-                    XXX        HRML( A,         S,         D,         F)   K(G)           HRMR( H,         J,         K,         L)   K(SEMI)    XXX
+                    XXX        HRML( A,         S,         D,         F)   KP(G)          HRMR( H,         J,         K,         L)   KP(SEMI)   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │          │
-                    XXX        K(Z)       K(X)       K(C)       K(V)       K(B)           K(N)       K(M)       K(COMMA)   K(DOT)     K(SLASH)   XXX
+                //│          │  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │  , <     │  . >     │  / ?     │          │
+                    XXX        KP(Z)      KP(X)      KP(C)      KP(V)      KP(B)          KP(N)      KP(M)      KP(COMMA)  KP(DOT)    KP(SLASH)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      MED_TAB    NAV_ESC    MOU_SPACE      NUM_ENTER  SYM_BSPC   HYPER_KEY
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -95,14 +95,14 @@
                 navigation_layer {
                     bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│          │          │          │          │Vim leader│          │   │ Undo     │ Paste    │ Copy     │ Cut      │ Redo     │          │
-                    XXX        XXX        XXX        XXX        K(SEMI)    XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   XXX
+                //│          │          │          │          │Vim leader│          │   │  Undo    │  Paste   │  Copy    │  Cut     │  Redo    │          │
+                    XXX        XXX        XXX        XXX        KP(SEMI)   XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │ Command    Alt      │ Control  │ Shift    │          │   │ Left     │ Down     │ Up       │ Right    │ Cmd + Tab│          │
-                    XXX        K(LGUI)    K(LALT)    K(LCTRL)   K(LSHFT)   XXX            K(LEFT)    K(DOWN)    K(UP)      K(RIGHT)   LGK(TAB)   XXX
+                //│          │  Command │  Alt     │  Control │  Shift   │          │   │  Left    │  Down    │  Up      │  Right   │ Cmd + Tab│          │
+                    XXX        KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)   XXX           KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT) LGK(TAB)    XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │Tmux Pr...│          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
-                    XXX        XXX        XXX        XXX        LCK(F)     XXX            K(F23)     LSK(LEFT)  LSK(RIGHT) K(F24)     LGK(GRAVE) XXX
+                    XXX        XXX        XXX        XXX        LCK(F)     XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &trans     &trans    &caps_word
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -112,16 +112,33 @@
                 mouse_layer {
                     bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│          │          │          │          │          │          │   │ Undo     │ Paste    │ Copy     │ Cut      │ Redo     │          │
+                //│          │          │          │          │          │          │   │  Undo    │  Paste   │  Copy    │  Cut     │  Redo    │          │
                     XXX        XXX        XXX        XXX        XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │          │ Max speed│ Low speed│ Med speed│          │   │Mouse left│Mouse down│ Mouse up │Mouse r...│ Cmd + Tab│          │
-                    XXX        XXX        LGK(F14)   LGK(F15)   LGK(F16)   XXX           LGK(F24)    LGK(F23)   LGK(F22)   LGK(F21)   LGK(TAB)   XXX
+                //│          │          │ Max speed│ Low speed│ Med speed│          │   │Mouse left│Mouse down│Mouse up  │Mouse r...│ Cmd + Tab│          │
+                    XXX        XXX        LGK(F14)   LGK(F15)   LGK(F16)   XXX            LGK(F24)   LGK(F23)   LGK(F22)   LGK(F21)  LGK(TAB)    XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │ Right alt│          │          │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
-                    XXX        XXX        K(RALT)    XXX        XXX        XXX           LGK(F20)    LGK(F19)   LGK(F18)   LGK(F17)   LGK(GRAVE) XXX
+                    XXX        XXX        KP(RALT)   XXX        XXX        XXX            LGK(F20)   LGK(F19)    LGK(F18)  LGK(F17)  LGK(GRAVE)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &mkp LCLK &mkp RCLK  &mkp MCLK
+                //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+                    >;
+                };
+
+                symbol_layer {
+                    bindings = <
+                //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+                //│          │  &       │  *       │  {       │  }       │  `       │   │  @       │  +       │  _       │  |       │          │          │
+                    XXX        KP(AMPS)   KP(STAR)   KP(LBRC)   KP(RBRC)   KP(GRAVE)      KP(AT)     KP(PLUS)   KP(UNDER)  KP(PIPE)   XXX        XXX
+                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                //│          │  ^       │  $       │  (       │  )       │  ~       │   │  !       │  =       │  -       │  \       │  ;       │          │
+                    XXX        KP(CARET)  KP(DLLR)   KP(LPAR)   KP(RPAR)   KP(TILDE)      KP(EXCL)   KP(EQUAL)  KP(MINUS)  KP(BSLH)   KP(SEMI)   XXX
+                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                //│          │  %       │  #       │  [       │  ]       │          │   │  '       │  "       │  ,       │  .       │  /       │          │
+                    XXX        KP(PRCNT)  KP(HASH)   KP(LBKT)   KP(RBKT)   XXX            KP(SQT)    KP(DQT)    KP(COMMA)  KP(DOT)    KP(SLASH)  XXX
+                //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+                                                     &trans     &trans     &trans         &trans     &trans     &trans
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
