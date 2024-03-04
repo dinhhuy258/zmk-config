@@ -118,8 +118,8 @@
                 //│          │          │ Max speed│ Low speed│ Med speed│          │   │Mouse left│Mouse down│Mouse up  │Mouse r...│ Cmd + Tab│          │
                     XXX        XXX        LGK(F14)   LGK(F15)   LGK(F16)   XXX            LGK(F24)   LGK(F23)   LGK(F22)   LGK(F21)  LGK(TAB)    XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │          │ Right alt│          │          │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
-                    XXX        XXX        KP(RALT)   XXX        XXX        XXX            LGK(F20)   LGK(F19)    LGK(F18)  LGK(F17)  LGK(GRAVE)  XXX
+                //│          │ Command  │  Alt     │  Control │  Shift   │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
+                    XXX        KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            LGK(F20)   LGK(F19)    LGK(F18)  LGK(F17)  LGK(GRAVE)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &mkp LCLK &mkp RCLK  &mkp MCLK
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
