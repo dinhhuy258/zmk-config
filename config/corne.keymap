@@ -32,7 +32,6 @@
 #define VOL_UP &kp C_VOL_UP
 #define VOL_DOWN &kp C_VOL_DN
 #define VOL_MUTE &kp C_MUTE
-#define BOOTLOADER &bootloader
 #define MAC_UNDO &kp C_AC_UNDO
 #define MAC_REDO &kp C_AC_REDO
 #define MAC_PASTE &kp C_AC_PASTE
@@ -78,8 +77,8 @@
                 media_layer {
                     bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│ Reset    │          │          │          │          │          │   │          │          │          │          │          │          │
-                   BOOTLOADER  XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX        XXX        XXX        XXX
+                //│          │          │          │          │          │          │   │          │          │          │          │          │          │
+                    XXX        XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX        XXX        XXX        XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │Screenshot│          │   │          │ Vol up   │ Vol down │ Vol mute │          │          │
                     XXX        XXX       BRI_DOWN    BRI_UP    HYPER(N4)   XXX            XXX        VOL_UP     VOL_DOWN   VOL_MUTE   XXX        XXX
