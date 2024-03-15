@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/mouse.h>
 
 #define MED 1
@@ -18,27 +19,32 @@
 #define XXX &none
 #define HYPER_KEY &kp LC(LS(LA(LGUI)))
 #define KP(k) &kp k
-#define HYPER(k) &kp LC(LS(LA(LG(k))))
 #define LGK(k) &kp LG(k)
 #define LSK(k) &kp LS(k)
 #define LCK(k) &kp LC(k)
+#define HYPER(k) &kp LC(LS(LA(LG(k))))
+
+#define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
+#define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
+
 #define MED_TAB &lt MED TAB
 #define NAV_ESC &lt NAV ESC
 #define MOU_SPACE &lt MOU SPACE
 #define NUM_ENTER &lt NUM ENTER
 #define SYM_BSPC &lt SYM BSPC
+
 #define BRI_DOWN &kp C_BRI_DN
 #define BRI_UP &kp C_BRI_UP
+
 #define VOL_UP &kp C_VOL_UP
 #define VOL_DOWN &kp C_VOL_DN
 #define VOL_MUTE &kp C_MUTE
+
 #define MAC_UNDO &kp C_AC_UNDO
 #define MAC_REDO &kp C_AC_REDO
 #define MAC_PASTE &kp C_AC_PASTE
 #define MAC_COPY &kp C_AC_COPY
 #define MAC_CUT &kp C_AC_CUT
-#define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
-#define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
 
 #define BT_C &bt BT_CLR
 #define BT_CA &bt BT_CLR_ALL
@@ -46,14 +52,18 @@
 #define BT_N &bt BT_NXT
 #define BT_P &bt BT_PRV
 
+#define EPW_ON &ep EP_ON
+#define EPW_OFF &ep EP_OFF
+
 / {
         behaviors {
             ht: hold_tap {
                 label = "hold_tap";
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
-                flavor = "hold-preferred";
+                flavor = "tap-preferred";
                 tapping-term-ms = <200>;
+                quick-tap-ms = <150>;
                 bindings = <&kp>, <&kp>;
             };
         };
@@ -88,7 +98,7 @@
                     XXX        XXX       BRI_DOWN    BRI_UP    HYPER(N4)   XXX            XXX        VOL_UP     VOL_DOWN   VOL_MUTE   XXX        XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-                    XXX        XXX        XXX        XXX        XXX        XXX            BT_N       XXX        XXX        BT_P       XXX        XXX
+                    XXX        EPW_OFF    XXX        XXX        XXX        EPW_ON         BT_N       XXX        XXX        BT_P       XXX        XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &trans     &trans     XXX
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
