@@ -40,16 +40,20 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
 
+#define BT_C &bt BT_CLR
+#define BT_CA &bt BT_CLR_ALL
+#define BT_S(n) &bt BT_SEL(n)
+#define BT_N &bt BT_NXT
+#define BT_P &bt BT_PRV
+
 / {
         behaviors {
             ht: hold_tap {
                 label = "hold_tap";
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
-                flavor = "tap-preferred";
+                flavor = "hold-preferred";
                 tapping-term-ms = <200>;
-                quick-tap-ms = <150>;
-                global-quick-tap;
                 bindings = <&kp>, <&kp>;
             };
         };
@@ -78,13 +82,13 @@
                     bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-                    XXX        XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX        XXX        XXX        XXX
+                    XXX        BT_CA      XXX        XXX        XXX        BT_C           BT_S(0)    BT_S(1)    BT_S(2)    BT_S(3)    BT_S(4)    XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │Screenshot│          │   │          │ Vol up   │ Vol down │ Vol mute │          │          │
                     XXX        XXX       BRI_DOWN    BRI_UP    HYPER(N4)   XXX            XXX        VOL_UP     VOL_DOWN   VOL_MUTE   XXX        XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-                    XXX        XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX        XXX        XXX        XXX
+                    XXX        XXX        XXX        XXX        XXX        XXX            BT_N       XXX        XXX        BT_P       XXX        XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &trans     &trans     XXX
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
