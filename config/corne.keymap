@@ -53,6 +53,8 @@
 #define BT_P &bt BT_PRV
 
 #define EPW_TOG &ext_power EP_TOG
+#define EPW_ON &ext_power EP_ON
+#define EPW_OFF &ext_power EP_OFF
 
 / {
         behaviors {
@@ -97,7 +99,7 @@
                     XXX        XXX       BRI_DOWN    BRI_UP    HYPER(N4)   XXX            XXX        VOL_UP     VOL_DOWN   VOL_MUTE   XXX        XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-                    XXX        XXX        XXX        XXX        XXX        EPW_TOG        BT_N       XXX        XXX        BT_P       XXX        XXX
+                    XXX        XXX        XXX        EPW_ON     EPW_OFF    EPW_TOG        BT_N       XXX        XXX        BT_P       XXX        XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &trans     &trans     XXX
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
