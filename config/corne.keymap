@@ -56,6 +56,16 @@
 #define EPW_ON &ext_power EP_ON
 #define EPW_OFF &ext_power EP_OFF
 
+#define TAPPING_TERM 200
+#define QUICK_TAP_MS 150
+
+&lt {
+    flavor          = "hold-preferred";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms    = <QUICK_TAP_MS>;
+};
+
+
 / {
         behaviors {
             ht: hold_tap {
@@ -63,8 +73,8 @@
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
-                tapping-term-ms = <200>;
-                quick-tap-ms = <0>;
+                tapping-term-ms = <TAPPING_TERM>;
+                quick-tap-ms = <QUICK_TAP_MS>;
                 bindings = <&kp>, <&kp>;
             };
         };
