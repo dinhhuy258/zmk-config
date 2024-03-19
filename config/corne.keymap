@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/mouse.h>
 
 #define MED 1
@@ -136,10 +135,10 @@
                     XXX        XXX        XXX        XXX        XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │ Max speed│ Low speed│ Med speed│          │   │Mouse left│Mouse down│Mouse up  │Mouse r...│ Cmd + Tab│          │
-                    XXX        XXX        &kp F14    &kp F15    &kp F16    XXX            &kp F24    &kp F23    &kp F22    &kp F21    LGK(TAB)    XXX
+                    XXX        XXX        LGK(F14)   LGK(F15)   LGK(F16)   XXX             &kp LG(F24)  &kp LG(F23)   &kp LG(F22) &kp LG(F21)    LGK(TAB)    XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │ Command  │  Alt     │  Control │  Shift   │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
-                    XXX        KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            &kp F20    &kp F19    &kp F18    &kp F17    LGK(GRAVE)  XXX
+                    XXX        KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            LGK(F20)   LGK(F19)    LGK(F18)  LGK(F17)  LGK(GRAVE)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &mkp LCLK &mkp RCLK  &mkp MCLK
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
