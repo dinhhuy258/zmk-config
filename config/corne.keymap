@@ -55,7 +55,7 @@
 #define QUICK_TAP_MS 200
 
 &lt {
-    flavor          = "hold-preferred";
+    flavor          = "tap-preferred";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms    = <QUICK_TAP_MS>;
 };
