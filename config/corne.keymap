@@ -57,7 +57,7 @@
 #define EPW_OFF &ext_power EP_OFF
 
 #define TAPPING_TERM 200
-#define QUICK_TAP_MS 150
+#define QUICK_TAP_MS 200
 
 &lt {
     flavor          = "hold-preferred";
