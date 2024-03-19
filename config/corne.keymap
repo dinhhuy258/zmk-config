@@ -140,7 +140,7 @@
                 //│          │ Command  │  Alt     │  Control │  Shift   │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
                     XXX        KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            LGK(F20)   LGK(F19)    LGK(F18)  LGK(F17)  LGK(GRAVE)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     &trans     &trans     &trans         &mkp LCLK &mkp RCLK  &mkp MCLK
+                                                     &trans     &trans     &trans         LGK(F13)   &mkp RCLK  &mkp MCLK
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
