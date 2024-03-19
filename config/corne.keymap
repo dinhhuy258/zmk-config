@@ -40,21 +40,17 @@
 #define VOL_DOWN &kp C_VOL_DN
 #define VOL_MUTE &kp C_MUTE
 
-#define MAC_UNDO &kp C_AC_UNDO
-#define MAC_REDO &kp C_AC_REDO
-#define MAC_PASTE &kp C_AC_PASTE
-#define MAC_COPY &kp C_AC_COPY
-#define MAC_CUT &kp C_AC_CUT
+#define MAC_UNDO &kp LG(Z)
+#define MAC_REDO &kp LG(LS(Z))
+#define MAC_PASTE &kp LG(V)
+#define MAC_COPY &kp LG(C)
+#define MAC_CUT &kp LG(X)
 
 #define BT_C &bt BT_CLR
 #define BT_CA &bt BT_CLR_ALL
 #define BT_S(n) &bt BT_SEL(n)
 #define BT_N &bt BT_NXT
 #define BT_P &bt BT_PRV
-
-#define EPW_TOG &ext_power EP_TOG
-#define EPW_ON &ext_power EP_ON
-#define EPW_OFF &ext_power EP_OFF
 
 #define TAPPING_TERM 200
 #define QUICK_TAP_MS 200
@@ -109,7 +105,7 @@
                     XXX        XXX       BRI_DOWN    BRI_UP    HYPER(N4)   XXX            XXX        VOL_UP     VOL_DOWN   VOL_MUTE   XXX        XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-                    XXX        XXX        XXX        EPW_ON     EPW_OFF    EPW_TOG        BT_N       XXX        XXX        BT_P       XXX        XXX
+                    XXX        XXX        XXX        XXX        XXX        XXX            BT_N       XXX        XXX        BT_P       XXX        XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &trans     &trans     &trans         &trans     &trans     XXX
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
