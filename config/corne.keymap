@@ -20,6 +20,7 @@
 #define LSK(k) &kp LS(k)
 #define LCK(k) &kp LC(k)
 #define HYPER(k) &kp LC(LS(LA(LG(k))))
+#define HT(k1,k2) &ht k1 k2
 
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
@@ -128,8 +129,8 @@
                 //│          │  ^       │  $       │  (       │  )       │  ~       │   │  !       │  =       │  -       │  \       │  ;       │          │
                     XXX        KP(CARET)  KP(DLLR)   KP(LPAR)   KP(RPAR)   KP(TILDE)      KP(EXCL)   KP(EQUAL)  KP(MINUS)  KP(BSLH)   KP(SEMI)   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │  %       │  #       │  [       │  ]       │          │   │  '       │  "       │  ,       │  .       │  /       │          │
-                    XXX        KP(PRCNT)  KP(HASH)   KP(LBKT)   KP(RBKT)   XXX            KP(SQT)    KP(DQT)    KP(COMMA)  KP(DOT)    KP(SLASH)  XXX
+                //│          │  %       │  #       │  [       │  ]       │  ?       │   │  '       │  "       │  ,       │  .       │  /       │          │
+                    XXX        KP(PRCNT)  KP(HASH)   KP(LBKT)   KP(RBKT)   KP(QMARK)      KP(SQT)    KP(DQT)    KP(COMMA)  KP(DOT)    KP(SLASH)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      XXX        &trans     &trans         &trans     &trans     XXX
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
