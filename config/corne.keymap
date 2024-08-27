@@ -27,7 +27,6 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
 
-#define BLE_TAB &lt BLE TAB
 #define NAV_ESC &lt NAV ESC
 #define MOU_SPACE &lt MOU SPACE
 #define NUM_ENTER &lt NUM ENTER
@@ -155,8 +154,8 @@
                 //│          │  ^       │  $       │  (       │  )       │  ~       │   │  !       │  =       │  -       │  \       │  ;       │          │
                     XXX        KP(CARET)  KP(DLLR)   KP(LPAR)   KP(RPAR)   KP(TILDE)      KP(EXCL)   KP(EQUAL)  KP(MINUS)  KP(BSLH)   KP(SEMI)   XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │  %       │  #       │  [       │  ]       │  ?       │   │  '       │  "       │  ,       │  .       │  /       │          │
-                    XXX        KP(PRCNT)  KP(HASH)   KP(LBKT)   KP(RBKT)   KP(QMARK)      KP(SQT)    KP(DQT)    KP(COMMA)  KP(DOT)    KP(SLASH)  XXX
+                //│          │  %       │  #       │  [       │  ]       │          │   │  '       │  "       │  ,       │  .       │  /       │          │
+                    XXX        KP(PRCNT)  KP(HASH)   KP(LBKT)   KP(RBKT)   XXX            KP(SQT)    KP(DQT)    KP(COMMA)  KP(DOT)    KP(SLASH)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      XXX        &trans     &trans         &trans     &trans     XXX
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
