@@ -16,4 +16,4 @@ compatible = "zmk,combos";
     layers = <LAYERS>; \
   };
 
-COMBO(vim_leader, &kp SEMI, 19 23, BASE)
+COMBO(vim_leader, &kp SEMI, 19 22, BASE)
