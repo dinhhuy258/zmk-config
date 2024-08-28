@@ -23,7 +23,7 @@
 #define LCK(k) &kp LC(k)
 #define HYPER(k) &kp LC(LS(LA(LG(k))))
 
-#define HRML(k1,k2,k3,k4,k5) &ht LGUI k1 &ht LALT k2 &ht LCTRL k3 &ht LSHFT k4 &ht LC(LS(LA(LGUI))) k4
+#define HRML(k1,k2,k3,k4,k5) &ht LGUI k1 &ht LALT k2 &ht LCTRL k3 &ht LSHFT k4 &ht LC(LS(LA(LGUI))) k5
 #define HRMR(k1,k2,k3,k4,k5) &ht LC(LS(LA(LGUI))) k1 &ht LSHFT k2 &ht LCTRL k3 &ht LALT k4 &ht LGUI k5
 
 #define NAV_ESC &lt NAV ESC
