@@ -21,7 +21,7 @@
 #define LCK(k) &kp LC(k)
 #define HYPER(k) &kp LC(LS(LA(LG(k))))
 #define HYPER_KEY &kp LC(LS(LA(LGUI)))
-#define SLASH_HYPER &ht HYPER_KEY SLASH
+#define SLASH_HYPER &ht LC(LS(LA(LGUI))) SLASH
 
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
