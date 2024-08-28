@@ -15,12 +15,13 @@
 #define NUM 4
 
 #define XXX &none
-#define HYPER_KEY &kp LC(LS(LA(LGUI)))
 #define KP(k) &kp k
 #define LGK(k) &kp LG(k)
 #define LSK(k) &kp LS(k)
 #define LCK(k) &kp LC(k)
 #define HYPER(k) &kp LC(LS(LA(LG(k))))
+#define HYPER_KEY &kp LC(LS(LA(LGUI)))
+#define SLASH_HYPER &ht HYPER_KEY SLASH
 
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
@@ -81,11 +82,11 @@
                 //│          │  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │          │
                     XXX        KP(Q)      KP(W)      KP(E)      KP(R)      KP(T)          KP(Y)      KP(U)      KP(I)      KP(O)      KP(P)      XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ; :     │          │
+                //│          │  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ⌫       │          │
                     XXX        HRML(A,         S,         D,         F)    KP(G)          KP(H)      HRMR(J,         K,         L,        BSPC)  XXX
                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │  , <     │  . >     │  / ?     │          │
-                    XXX        KP(Z)      KP(X)      KP(C)      KP(V)      KP(B)          KP(N)      KP(M)      KP(COMMA)  KP(DOT)    KP(SLASH)  XXX
+                    XXX        KP(Z)      KP(X)      KP(C)      KP(V)      KP(B)          KP(N)      KP(M)      KP(COMMA)  KP(DOT)   SLASH_HYPER XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      XXX        NAV_ESC    MOU_SPACE      NUM_ENTER  SYM_TAB    XXX 
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
