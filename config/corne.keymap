@@ -9,11 +9,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#define MED 1
-#define NAV 2
-#define MOU 3
-#define SYM 4
-#define NUM 5
+#define NAV 1
+#define MOU 2
+#define SYM 3
+#define NUM 4
 
 #define XXX &none
 #define HYPER_KEY &kp LC(LS(LA(LGUI)))
@@ -26,7 +25,6 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht LSHFT k1 &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
 
-#define MED_TAB &lt MED TAB
 #define NAV_ESC &lt NAV ESC
 #define MOU_SPACE &lt MOU SPACE
 #define NUM_ENTER &lt NUM ENTER
@@ -89,24 +87,7 @@
                 //│          │  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │  , <     │  . >     │  / ?     │          │
                     XXX        KP(Z)      KP(X)      KP(C)      KP(V)      KP(B)          KP(N)      KP(M)      KP(COMMA)  KP(DOT)    KP(SLASH)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     MED_TAB    NAV_ESC    MOU_SPACE      NUM_ENTER  SYM_BSPC   HYPER_KEY
-                //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
-                    >;
-                };
-
-                media_layer {
-                    bindings = <
-                //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-                    XXX        BT_CA      XXX        XXX        XXX        BT_C           BT_S(0)    BT_S(1)    BT_S(2)    BT_S(3)    BT_S(4)    XXX
-                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │          │          │          │Screenshot│          │   │          │ Vol up   │ Vol down │ Vol mute │          │          │
-                    XXX        XXX       BRI_DOWN    BRI_UP    HYPER(N4)   XXX            XXX        VOL_UP     VOL_DOWN   VOL_MUTE   XXX        XXX
-                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-                    XXX        XXX        XXX        XXX        XXX        XXX            BT_N       XXX        XXX        BT_P       XXX        XXX
-                //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     &trans     &trans     &trans         &trans     &trans     XXX
+                                                     XXX        NAV_ESC    MOU_SPACE      NUM_ENTER  SYM_BSPC   HYPER_KEY
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
@@ -123,7 +104,7 @@
                 //│          │          │          │          │Tmux Pr...│          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
                     XXX        XXX        XXX        XXX        LCK(F)     XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     &trans     &trans     &trans         &trans     &trans    &caps_word
+                                                     XXX        &trans     &trans         &trans     &trans    &caps_word
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
@@ -140,7 +121,7 @@
                 //│          │ Command  │  Alt     │  Control │  Shift   │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
                     XXX        KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            LGK(F20)   LGK(F19)    LGK(F18)  LGK(F17)  LGK(GRAVE)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     &trans     &trans     &trans         LGK(F13)   &mkp RCLK  &mkp MCLK
+                                                     XXX        &trans     &trans         LGK(F13)   &mkp RCLK  &mkp MCLK
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
@@ -157,7 +138,7 @@
                 //│          │  %       │  #       │  [       │  ]       │          │   │  '       │  "       │  ,       │  .       │  /       │          │
                     XXX        KP(PRCNT)  KP(HASH)   KP(LBKT)   KP(RBKT)   XXX            KP(SQT)    KP(DQT)    KP(COMMA)  KP(DOT)    KP(SLASH)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     &trans     &trans     &trans         &trans     &trans     &trans
+                                                     XXX        &trans     &trans         &trans     &trans     &trans
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
@@ -174,7 +155,7 @@
                 //│          │  0       │  1       │  2       │  3       │  =       │   │          │Tmux pr...│  ,       │  .       │  /       │          │
                     XXX        KP(N0)     KP(N1)     KP(N2)     KP(N3)     KP(EQUAL)      XXX        LCK(F)     KP(COMMA)  KP(DOT)    KP(SLASH)  XXX
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     &trans     &trans     &trans         &trans     &trans     &trans
+                                                     XXX        &trans     &trans         &trans     &trans     &trans
                 //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                     >;
                 };
