@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
+#define BASE 0
 #define NAV 1
 #define MOU 2
 #define SYM 3
@@ -60,6 +61,10 @@
 
 
 / {
+  combos {
+    #include "combos.dtsi"
+  };
+
   behaviors {
     ht: hold_tap {
       label = "hold_tap";
