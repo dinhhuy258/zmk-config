@@ -109,7 +109,7 @@
     //│          │ Vol down │ Vol up   │ Vol mute │Tmux Pr...│          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
         XXX        VOL_DOWN   VOL_UP     VOL_MUTE   LCK(F)     XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  XXX
     //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                         XXX        &trans     &trans         &trans     &trans     XXX
+                                         XXX        &trans     &trans         &trans    &caps_word  XXX
     //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
       >;
     };
