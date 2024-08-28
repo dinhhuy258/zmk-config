@@ -15,7 +15,3 @@ compatible = "zmk,combos";
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
   };
-
-COMBO(vim_leader, &kp BSPC, 13 22, BASE)
-COMBO(vim_leader, &kp BSPC, 13 22, SYM)
-COMBO(vim_leader, &kp BSPC, 13 22, NUM)
