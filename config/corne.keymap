@@ -12,6 +12,10 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/42.h"
 
+#include "settings.dtsi"
+#include "behaviors.dtsi"
+#include "combos.dtsi"
+
 #define BASE 0
 #define NAV 1
 #define MOU 2
@@ -53,33 +57,8 @@
 #define BT_N &bt BT_NXT
 #define BT_P &bt BT_PRV
 
-#define TAPPING_TERM 200
-#define QUICK_TAP_MS 200
-
-&lt {
-  flavor          = "tap-preferred";
-  tapping-term-ms = <TAPPING_TERM>;
-  quick-tap-ms    = <QUICK_TAP_MS>;
-};
-
 
 / {
-  combos {
-    #include "combos.dtsi"
-  };
-
-  behaviors {
-    ht: hold_tap {
-      label = "hold_tap";
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <TAPPING_TERM>;
-      quick-tap-ms = <QUICK_TAP_MS>;
-      bindings = <&kp>, <&kp>;
-    };
-  };
-
   keymap {
     compatible = "zmk,keymap";
 

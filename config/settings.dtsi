@@ -1,0 +1,6 @@
+// layer tap setting
+&lt {
+  flavor          = "tap-preferred";
+  tapping-term-ms = 200;
+  quick-tap-ms    = 200;
+};
