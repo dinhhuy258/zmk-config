@@ -82,7 +82,7 @@
       bindings = <
     //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
     //│          │          │          │Screenshot│Vim leader│          │   │  Undo    │  Paste   │  Copy    │  Cut     │  Redo    │          │
-        XXX        BRI_DOWN   BRI_UP     HYPER(N4)  KP(SEMI)   XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   XXX
+        XXX        BRI_DOWN   BRI_UP     HYPER(N4)  KP(BSPC)   XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   XXX
     //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     //│          │  Command │  Alt     │  Control │  Shift   │          │   │  Left    │  Down    │  Up      │  Right   │ Cmd + Tab│          │
         XXX        KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT) LGK(TAB)    XXX
@@ -133,7 +133,7 @@
       bindings = <
     //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
     //│          │  -       │  7       │  8       │  9       │  +       │   │          │Vim leader│          │          │  %       │          │
-        XXX        KP(MINUS)  KP(N7)     KP(N8)     KP(N9)    KP(PLUS)        XXX        KP(SEMI)   XXX        XXX        KP(PRCNT)  XXX
+        XXX        KP(MINUS)  KP(N7)     KP(N8)     KP(N9)    KP(PLUS)        XXX        KP(BSPC)   XXX        XXX        KP(PRCNT)  XXX
     //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     //│          │  \       │  4       │  5       │  6       │  *       │   │          │  Shift   │  Control │  Alt     │  Command │          │
         XXX        KP(BSLH)   KP(N4)     KP(N5)     KP(N6)    KP(STAR)        XXX        KP(LSHFT)  KP(LCTRL)  KP(LALT)   KP(LGUI)   XXX

@@ -7,4 +7,6 @@
   ╰───────────╮ 36  37  38 │ 39  40  41 ╭───────────╯ ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
               ╰────────────┴────────────╯                         ╰─────────────┴─────────────╯             */
 
-ZMK_COMBO(input_source, HYPER(TAB), LB4 RB4, BASE)
+#define COMBO_TERM 50
+
+ZMK_COMBO(input_source, HYPER(TAB), LB4 RB4, BASE, COMBO_TERM)
