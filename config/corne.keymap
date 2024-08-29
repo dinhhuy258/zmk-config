@@ -12,10 +12,6 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/42.h"
 
-#include "settings.dtsi"
-#include "behaviors.dtsi"
-#include "combos.dtsi"
-
 #define BASE 0
 #define NAV 1
 #define MOU 2
@@ -57,6 +53,9 @@
 #define BT_N &bt BT_NXT
 #define BT_P &bt BT_PRV
 
+#include "settings.dtsi"
+#include "behaviors.dtsi"
+#include "combos.dtsi"
 
 / {
   keymap {
