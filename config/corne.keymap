@@ -1,8 +1,12 @@
 // Map extra keys
 #define _LHX  &none
 #define _RHX  &none
-// Activate bluetooth
-#define CONFIG_WIRELESS 1
+#define _LTX
+#define _LMX
+#define _LBX
+#define _RTX
+#define _RMX
+#define _RBX
 
 #include "zmk-helpers/key-labels/36.h"
 #include "base.keymap"
