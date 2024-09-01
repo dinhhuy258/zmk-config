@@ -10,7 +10,6 @@
 #define MOU 2
 #define SYM 3
 #define NUM 4
-#define BLE 5
 
 // Keys
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
@@ -42,12 +41,6 @@
 #define MAC_PASTE &kp LG(V)
 #define MAC_COPY &kp LG(C)
 #define MAC_CUT &kp LG(X)
-
-#define BT_C &bt BT_CLR
-#define BT_CA &bt BT_CLR_ALL
-#define BT_S(n) &bt BT_SEL(n)
-#define BT_N &bt BT_NXT
-#define BT_P &bt BT_PRV
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -132,20 +125,5 @@ ZMK_LAYER(number,
       _LBX       KP(N0)     KP(N1)     KP(N2)     KP(N3)     KP(EQUAL)      XXX        LCK(F)     KP(COMMA)  KP(DOT)    KP(SLASH)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        _LHX       KP(BSPC)   &trans         &trans     &trans     _RHX
-  //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
-)
-
-ZMK_LAYER(bluetooh,
-  //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-      _LTX       XXX        XXX        XXX        XXX        XXX            BT_S(0)    BT_S(1)    BT_S(2)    BT_S(3)    BT_S(4)    _RTX
-  //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-      _LMX       XXX        XXX        XXX        XXX        XXX            BT_CA      BT_C        XXX        XXX        XXX       _RMX
-  //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-      _LBX       XXX        XXX        XXX        XXX        XXX            BT_N       XXX        XXX        BT_P       XXX        _RBX
-  //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       _LHX       XXX        XXX            XXX        XXX        _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 )
