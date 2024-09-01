@@ -1,0 +1,5 @@
+ZMK_MACRO(vim_quit,
+  wait-ms = <1>;
+  tap-ms = <1>;
+  bindings = <&kp COLON &kp Q &kp EXCL>;
+)

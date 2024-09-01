@@ -49,6 +49,7 @@
 
 #include "zmk-helpers/helper.h"
 
+#include "includes/macros.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/mods.dtsi"
 #include "includes/settings.dtsi"
