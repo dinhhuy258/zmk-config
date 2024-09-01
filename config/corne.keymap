@@ -1,4 +1,4 @@
 ZMK_APPLY_MATRIX_TRANSFORM(five_column_transform)
 
-#include "keys/36.h"
+#include "zmk-helpers/key-labels/36.h"
 #include "base.keymap"
