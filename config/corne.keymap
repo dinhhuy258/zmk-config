@@ -10,12 +10,13 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #include "zmk-helpers/helper.h"
-#include "zmk-helpers/key-labels/42.h"
+
 #include "keys.h"
 #include "layers.h"
-#include "settings.dtsi"
-#include "behaviors.dtsi"
+
 #include "combos.dtsi"
+#include "mods.dtsi"
+#include "settings.dtsi"
 
 ZMK_LAYER(base,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮

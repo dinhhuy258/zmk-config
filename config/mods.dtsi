@@ -1,0 +1,18 @@
+#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
+  ZMK_HOLD_TAP(NAME, \
+    flavor = "balanced"; \
+    tapping-term-ms = <280>; \
+    quick-tap-ms = <175>; \
+    require-prior-idle-ms = <150>; \
+    bindings = <HOLD>, <TAP>; \
+    hold-trigger-key-positions = <TRIGGER_POS>; \
+    hold-trigger-on-release; \
+  )
+
+MAKE_HRM(hrml, &kp, &kp, KEYS_R THUMBS)
+MAKE_HRM(hrmr, &kp, &kp, KEYS_L THUMBS)
+
+#define HRML(k1, k2, k3, k4, k5)                                               \
+  &hrml LGUI k1 &hrml LALT k2 &hrml LCTRL k3 &hrml LSHFT k4 &hrml LC(LS(LA(LGUI))) k5
+#define HRMR(k1, k2, k3, k4, k5)                                               \
+  &hrmr LC(LS(LA(LGUI))) k1 &hrmr LSHFT k2 &hrmr LCTRL k3 &hrmr LALT k4 &hrmr LGUI k5

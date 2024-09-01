@@ -1,16 +1,17 @@
 #pragma once
 
+#include "zmk-helpers/key-labels/42.h"
+
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
+#define THUMBS LH2 LH1 LH0 RH0 RH1
+
 #define XXX &none
 #define KP(k) &kp k
 #define LGK(k) &kp LG(k)
 #define LSK(k) &kp LS(k)
 #define LCK(k) &kp LC(k)
 #define HYPER(k) &kp LC(LS(LA(LG(k))))
-
-#define HRML(k1, k2, k3, k4, k5)                                               \
-  &ht LGUI k1 &ht LALT k2 &ht LCTRL k3 &ht LSHFT k4 &ht LC(LS(LA(LGUI))) k5
-#define HRMR(k1, k2, k3, k4, k5)                                               \
-  &ht LC(LS(LA(LGUI))) k1 &ht LSHFT k2 &ht LCTRL k3 &ht LALT k4 &ht LGUI k5
 
 #define NAV_ESC &lt NAV ESC
 #define MOU_SPACE &lt MOU SPACE
