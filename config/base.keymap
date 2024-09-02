@@ -52,6 +52,7 @@
 #include "includes/macros.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/mods.dtsi"
+#include "includes/swapper.dtsi"
 #include "includes/settings.dtsi"
 
 ZMK_LAYER(base,
@@ -75,7 +76,7 @@ ZMK_LAYER(navigation,
       _LTX       BRI_DOWN   BRI_UP     HYPER(N4)  KP(BSPC)   XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │  Command │  Alt     │  Control │  Shift   │          │   │  Left    │  Down    │  Up      │  Right   │ Cmd + Tab│          │
-      _LMX       KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT) LGK(TAB)    _RMX
+      _LMX       KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT)  &swapper   _RMX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │ Vol down │ Vol up   │ Vol mute │Tmux Pr...│          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
       _LBX       VOL_DOWN   VOL_UP     VOL_MUTE   LCK(F)     XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  _RBX
