@@ -72,8 +72,8 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(navigation,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │          │          │Screenshot│          │          │   │  Undo    │  Paste   │  Copy    │  Cut     │ CS + Tab │          │
-      _LTX       BRI_DOWN   BRI_UP     HYPER(N4)  XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT   KP(LS(TAB)) _RTX
+  //│          │          │          │Screenshot│          │          │   │          │          │          │          │ CS + Tab │          │
+      _LTX       BRI_DOWN   BRI_UP     HYPER(N4)  XXX        XXX            XXX        XXX        XXX        XXX       KP(LS(TAB)) _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │  Command │  Alt     │  Control │  Shift   │          │   │  Left    │  Down    │  Up      │  Right   │ Cmd + Tab│          │
       _LMX       KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT)  &swapper   _RMX
@@ -87,8 +87,8 @@ ZMK_LAYER(navigation,
 
 ZMK_LAYER(mouse,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │          │          │          │          │          │   │  Undo    │  Paste   │  Copy    │  Cut     │ CS + Tab │          │
-      _LTX       XXX        XXX        XXX        XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT   KP(LS(TAB)) _RTX
+  //│          │          │          │          │          │          │   │          │          │          │          │ CS + Tab │          │
+      _LTX       XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX         XXX      KP(LS(TAB)) _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │          │ Max speed│ Low speed│ Med speed│          │   │Mouse left│Mouse down│Mouse up  │Mouse r...│ Cmd + Tab│          │
       _LMX       XXX        LGK(F14)   LGK(F15)   LGK(F16)   XXX          &kp LG(F24) &kp LG(F23) &kp LG(F22) &kp LG(F21) LGK(TAB) _RMX

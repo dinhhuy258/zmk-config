@@ -1,7 +1,15 @@
+#define TAP_DANCE_TAPPING_TERM_MS 200
 #define VIM_LEADER KP(SEMI)
 #define TMUX_PREFIX LCK(F)
 
 ZMK_TAP_DANCE(leader,
-  tapping-term-ms = <200>;
+  tapping-term-ms = <TAP_DANCE_TAPPING_TERM_MS>;
   bindings = <TMUX_PREFIX>, <VIM_LEADER>;
+)
+
+// Tap: copy
+// Double tap: cut
+ZMK_TAP_DANCE(copy_cut,
+  tapping-term-ms = <TAP_DANCE_TAPPING_TERM_MS>;
+  bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
