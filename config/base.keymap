@@ -52,6 +52,7 @@
 #include "includes/macros.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/mods.dtsi"
+#include "includes/tap_dances.dtsi"
 #include "includes/swapper.dtsi"
 #include "includes/settings.dtsi"
 
@@ -72,14 +73,14 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(navigation,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │          │          │Screenshot│Vim leader│          │   │  Undo    │  Paste   │  Copy    │  Cut     │  Redo    │          │
-      _LTX       BRI_DOWN   BRI_UP     HYPER(N4)  KP(SEMI)   XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   _RTX
+  //│          │ Bri down │ Bri up   │Screenshot│          │          │   │  Undo    │  Paste   │  Copy    │  Cut     │  Redo    │          │
+      _LTX       BRI_DOWN   BRI_UP     HYPER(N4)  XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │          │          │          │          │          │   │  Left    │  Down    │  Up      │  Right   │ Cmd + Tab│          │
-      _LMX      KP(LS(TAB)) XXX        XXX        XXX        XXX            KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT)  &swapper   _RMX
+  //│          │ CS + Tab │          │          │          │          │   │  Left    │  Down    │  Up      │  Right   │ Cmd + Tab│          │
+      _LMX      KP(LS(TAB)) XXX        XXX        &leader    XXX            KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT)  &swapper   _RMX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │ Vol down │ Vol up   │ Vol mute │Tmux Pr...│          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
-      _LBX       VOL_DOWN   VOL_UP     VOL_MUTE   LCK(F)     XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  _RBX
+  //│          │ Vol down │ Vol up   │ Vol mute │          │          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
+      _LBX       VOL_DOWN   VOL_UP     VOL_MUTE   XXX        XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        _LHX       &trans     &trans         &trans    &caps_word  _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -117,15 +118,13 @@ ZMK_LAYER(symbol,
 
 ZMK_LAYER(number,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │  -       │  7       │  8       │  9       │  +       │   │          │Vim leader│          │          │  %       │          │
-      _LTX       KP(MINUS)  KP(N7)     KP(N8)     KP(N9)    KP(PLUS)        XXX        KP(SEMI)   XXX        XXX        KP(PRCNT)  _RTX
+  //│          │  -       │  7       │  8       │  9       │  +       │   │          │          │          │          │  %       │          │
+      _LTX       KP(MINUS)  KP(N7)     KP(N8)     KP(N9)    KP(PLUS)        XXX        XXX        XXX        XXX        KP(PRCNT)  _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │  \       │  4       │  5       │  6       │  *       │   │          │  Shift   │  Control │  Alt     │  Command │          │
-      _LMX       KP(BSLH)   KP(N4)     KP(N5)     KP(N6)    KP(STAR)        XXX        KP(LSHFT)  KP(LCTRL)  KP(LALT)   KP(LGUI)   _RMX
+  //│          │  \       │  4       │  5       │  6       │  *       │   │          │          │          │          │          │          │
+      _LMX       KP(BSLH)   KP(N4)     KP(N5)     KP(N6)    KP(STAR)        XXX        &leader    XXX        XXX        XXX        _RMX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │  0       │  1       │  2       │  3       │  =       │   │          │Tmux pr...│  ,       │  .       │  /       │          │
-      _LBX       KP(N0)     KP(N1)     KP(N2)     KP(N3)     KP(EQUAL)      XXX        LCK(F)     KP(COMMA)  KP(DOT)    KP(SLASH)  _RBX
+  //│          │  0       │  1       │  2       │  3       │  =       │   │          │          │  ,       │  .       │  /       │          │
+      _LBX       KP(N0)     KP(N1)     KP(N2)     KP(N3)     KP(EQUAL)      XXX        XXX        KP(COMMA)  KP(DOT)    KP(SLASH)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        _LHX       KP(BSPC)   &trans         &trans     &trans     _RHX
-  //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
-)
