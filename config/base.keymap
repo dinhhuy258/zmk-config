@@ -37,7 +37,6 @@
 #define VOL_MUTE &kp C_MUTE
 
 #define MAC_UNDO &kp LG(Z)
-#define MAC_REDO &kp LG(LS(Z))
 #define MAC_PASTE &kp LG(V)
 #define MAC_COPY &kp LG(C)
 #define MAC_CUT &kp LG(X)
@@ -73,14 +72,14 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(navigation,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │ Bri down │ Bri up   │Screenshot│          │          │   │  Undo    │  Paste   │  Copy    │  Cut     │  Redo    │          │
-      _LTX       BRI_DOWN   BRI_UP     HYPER(N4)  XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   _RTX
+  //│          │          │          │Screenshot│          │          │   │  Undo    │  Paste   │  Copy    │  Cut     │ CS + Tab │          │
+      _LTX       BRI_DOWN   BRI_UP     HYPER(N4)  XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT   KP(LS(TAB)) _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │ CS + Tab │          │          │          │          │   │  Left    │  Down    │  Up      │  Right   │ Cmd + Tab│          │
-      _LMX      KP(LS(TAB)) XXX        XXX        &leader    XXX            KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT)  &swapper   _RMX
+  //│          │  Command │  Alt     │  Control │  Shift   │          │   │  Left    │  Down    │  Up      │  Right   │ Cmd + Tab│          │
+      _LMX       KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT)  &swapper   _RMX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │ Vol down │ Vol up   │ Vol mute │          │          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
-      _LBX       VOL_DOWN   VOL_UP     VOL_MUTE   XXX        XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  _RBX
+  //│          │ Vol down │ Vol up   │ Vol mute │  Leader  │          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
+      _LBX       VOL_DOWN   VOL_UP     VOL_MUTE   &leader    XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        _LHX       &trans     &trans         &trans    &caps_word  _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -88,8 +87,8 @@ ZMK_LAYER(navigation,
 
 ZMK_LAYER(mouse,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │          │          │          │          │          │   │  Undo    │  Paste   │  Copy    │  Cut     │  Redo    │          │
-      _LTX       XXX        XXX        XXX        XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   _RTX
+  //│          │          │          │          │          │          │   │  Undo    │  Paste   │  Copy    │  Cut     │ CS + Tab │          │
+      _LTX       XXX        XXX        XXX        XXX        XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT   KP(LS(TAB)) _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │          │ Max speed│ Low speed│ Med speed│          │   │Mouse left│Mouse down│Mouse up  │Mouse r...│ Cmd + Tab│          │
       _LMX       XXX        LGK(F14)   LGK(F15)   LGK(F16)   XXX          &kp LG(F24) &kp LG(F23) &kp LG(F22) &kp LG(F21) LGK(TAB) _RMX
@@ -121,10 +120,12 @@ ZMK_LAYER(number,
   //│          │  -       │  7       │  8       │  9       │  +       │   │          │          │          │          │  %       │          │
       _LTX       KP(MINUS)  KP(N7)     KP(N8)     KP(N9)    KP(PLUS)        XXX        XXX        XXX        XXX        KP(PRCNT)  _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │  \       │  4       │  5       │  6       │  *       │   │          │          │          │          │          │          │
-      _LMX       KP(BSLH)   KP(N4)     KP(N5)     KP(N6)    KP(STAR)        XXX        &leader    XXX        XXX        XXX        _RMX
+  //│          │  \       │  4       │  5       │  6       │  *       │   │          │  Shift   │  Control │  Alt     │  Command │          │
+      _LMX       KP(BSLH)   KP(N4)     KP(N5)     KP(N6)    KP(STAR)        XXX        KP(LSHFT)  KP(LCTRL)  KP(LALT)   KP(LGUI)   _RMX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │  0       │  1       │  2       │  3       │  =       │   │          │          │  ,       │  .       │  /       │          │
-      _LBX       KP(N0)     KP(N1)     KP(N2)     KP(N3)     KP(EQUAL)      XXX        XXX        KP(COMMA)  KP(DOT)    KP(SLASH)  _RBX
+  //│          │  0       │  1       │  2       │  3       │  =       │   │          │  Leader  │  ,       │  .       │  /       │          │
+      _LBX       KP(N0)     KP(N1)     KP(N2)     KP(N3)     KP(EQUAL)      XXX        &leader    KP(COMMA)  KP(DOT)    KP(SLASH)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        _LHX       KP(BSPC)   &trans         &trans     &trans     _RHX
+  //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+)
