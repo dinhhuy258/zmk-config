@@ -36,11 +36,6 @@
 #define VOL_DOWN &kp C_VOL_DN
 #define VOL_MUTE &kp C_MUTE
 
-#define MAC_UNDO &kp LG(Z)
-#define MAC_PASTE &kp LG(V)
-#define MAC_COPY &kp LG(C)
-#define MAC_CUT &kp LG(X)
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>

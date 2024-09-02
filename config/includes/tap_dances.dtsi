@@ -11,5 +11,5 @@ ZMK_TAP_DANCE(leader,
 // Double tap: cut
 ZMK_TAP_DANCE(copy_cut,
   tapping-term-ms = <TAP_DANCE_TAPPING_TERM_MS>;
-  bindings = <&kp LC(INS)>, <&kp LC(X)>;
+  bindings = <&kp LG(C)>, <&kp LG(X)>;
 )
