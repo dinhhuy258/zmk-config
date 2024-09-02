@@ -1,3 +1,4 @@
 ZMK_TRI_STATE(swapper,
   bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+  ignored-key-positions = <LM4>;
 )

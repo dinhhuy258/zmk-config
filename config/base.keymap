@@ -27,7 +27,7 @@
 #define NAV_ESC &lt NAV ESC
 #define MOU_SPACE &lt MOU SPACE
 #define NUM_ENTER &lt NUM ENTER
-#define SYM_TAB &lt SYM TAB
+#define SYM_BSPC &lt SYM BSPC
 
 #define BRI_DOWN &kp C_BRI_DN
 #define BRI_UP &kp C_BRI_UP
@@ -60,23 +60,23 @@ ZMK_LAYER(base,
   //│          │  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │          │
       _LTX       KP(Q)      KP(W)      KP(E)      KP(R)      KP(T)          KP(Y)      KP(U)      KP(I)      KP(O)      KP(P)      _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ⌫       │          │
-      _LMX       HRML(A,         S,         D,         F,         G)        HRMR(H,         J,         K,         L,        BSPC)  _RMX
+  //│          │  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ; :     │          │
+      _LMX       HRML(A,         S,         D,         F,         G)        HRMR(H,         J,         K,         L,        SEMI)  _RMX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │  , <     │  . >     │  / ?     │          │
       _LBX       KP(Z)      KP(X)      KP(C)      KP(V)      KP(B)          KP(N)      KP(M)      KP(COMMA)  KP(DOT)    KP(SLASH)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       _LHX       NAV_ESC    MOU_SPACE      NUM_ENTER  SYM_TAB    _RHX
+                                       _LHX       NAV_ESC    MOU_SPACE      NUM_ENTER  SYM_BSPC   _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 )
 
 ZMK_LAYER(navigation,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
   //│          │          │          │Screenshot│Vim leader│          │   │  Undo    │  Paste   │  Copy    │  Cut     │  Redo    │          │
-      _LTX       BRI_DOWN   BRI_UP     HYPER(N4)  KP(BSPC)   XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   _RTX
+      _LTX       BRI_DOWN   BRI_UP     HYPER(N4)  KP(SEMI)   XXX            MAC_UNDO   MAC_PASTE  MAC_COPY   MAC_CUT    MAC_REDO   _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │  Command │  Alt     │  Control │  Shift   │          │   │  Left    │  Down    │  Up      │  Right   │ Cmd + Tab│          │
-      _LMX       KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX            KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT)  &swapper   _RMX
+  //│          │          │          │          │          │          │   │  Left    │  Down    │  Up      │  Right   │ Cmd + Tab│          │
+      _LMX      KP(LS(TAB)) XXX        XXX        XXX        XXX            KP(LEFT)   KP(DOWN)   KP(UP)     KP(RIGHT)  &swapper   _RMX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │ Vol down │ Vol up   │ Vol mute │Tmux Pr...│          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
       _LBX       VOL_DOWN   VOL_UP     VOL_MUTE   LCK(F)     XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  _RBX
@@ -118,7 +118,7 @@ ZMK_LAYER(symbol,
 ZMK_LAYER(number,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
   //│          │  -       │  7       │  8       │  9       │  +       │   │          │Vim leader│          │          │  %       │          │
-      _LTX       KP(MINUS)  KP(N7)     KP(N8)     KP(N9)    KP(PLUS)        XXX        KP(BSPC)   XXX        XXX        KP(PRCNT)  _RTX
+      _LTX       KP(MINUS)  KP(N7)     KP(N8)     KP(N9)    KP(PLUS)        XXX        KP(SEMI)   XXX        XXX        KP(PRCNT)  _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │  \       │  4       │  5       │  6       │  *       │   │          │  Shift   │  Control │  Alt     │  Command │          │
       _LMX       KP(BSLH)   KP(N4)     KP(N5)     KP(N6)    KP(STAR)        XXX        KP(LSHFT)  KP(LCTRL)  KP(LALT)   KP(LGUI)   _RMX
