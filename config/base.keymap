@@ -18,7 +18,7 @@
 
 // Keymaps
 #define XXX &none
-#define ___ ___   
+#define ___ &trans
 #define KP(k) &kp k
 #define LGK(k) &kp LG(k)
 #define LSK(k) &kp LS(k)
