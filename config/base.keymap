@@ -18,6 +18,7 @@
 
 // Keymaps
 #define XXX &none
+#define ___ ___   
 #define KP(k) &kp k
 #define LGK(k) &kp LG(k)
 #define LSK(k) &kp LS(k)
@@ -76,7 +77,7 @@ ZMK_LAYER(navigation,
   //│          │ Vol down │ Vol up   │ Vol mute │  Leader  │          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
       _LBX       VOL_DOWN   VOL_UP     VOL_MUTE   &leader    XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       _LHX       &trans     &trans         &trans    &caps_word  _RHX
+                                       _LHX       ___        ___            ___       &caps_word  _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 )
 
@@ -91,7 +92,7 @@ ZMK_LAYER(mouse,
   //│          │          │          │          │          │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
       _LBX       XXX        XXX        XXX        XXX        XXX            LGK(F20)   LGK(F19)    LGK(F18)  LGK(F17)  LGK(GRAVE)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       _LHX       &trans     &trans         LGK(F13)   &mkp RCLK  _RHX
+                                       _LHX       ___        ___            LGK(F13)   &mkp RCLK  _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 )
 
@@ -106,7 +107,7 @@ ZMK_LAYER(symbol,
   //│          │  %       │  #       │  [       │  ]       │  ?       │   │  '       │  "       │  ,       │  .       │  /       │          │
       _LBX       KP(PRCNT)  KP(HASH)   KP(LBKT)   KP(RBKT)   KP(QMARK)      KP(SQT)    KP(DQT)    KP(COMMA)  KP(DOT)    KP(SLASH)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       _LHX       KP(BSPC)   &trans         &trans     &trans     _RHX
+                                       _LHX       ___        ___            ___        ___        _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 )
 
@@ -121,6 +122,6 @@ ZMK_LAYER(number,
   //│          │  0       │  1       │  2       │  3       │  =       │   │          │  Leader  │  ,       │  .       │  /       │          │
       _LBX       KP(N0)     KP(N1)     KP(N2)     KP(N3)     KP(EQUAL)      XXX        &leader    KP(COMMA)  KP(DOT)    KP(SLASH)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       _LHX       KP(BSPC)   &trans         &trans     &trans     _RHX
+                                       _LHX       ___        ___            ___        ___        _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 )
