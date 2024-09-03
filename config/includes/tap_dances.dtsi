@@ -6,13 +6,3 @@ ZMK_TAP_DANCE(leader,
   tapping-term-ms = <TAP_DANCE_TAPPING_TERM_MS>;
   bindings = <TMUX_PREFIX>, <VIM_LEADER>;
 )
-
-ZMK_TAP_DANCE(copy_cut,
-  tapping-term-ms = <TAP_DANCE_TAPPING_TERM_MS>;
-  bindings = <&kp LG(C)>, <&kp LG(X)>;
-)
-
-ZMK_TAP_DANCE(paste_undo,
-  tapping-term-ms = <TAP_DANCE_TAPPING_TERM_MS>;
-  bindings = <&kp LG(V)>, <&kp LG(Z)>;
-)
