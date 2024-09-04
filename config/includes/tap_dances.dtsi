@@ -1,8 +1,0 @@
-#define TAP_DANCE_TAPPING_TERM_MS 300
-#define VIM_LEADER KP(SEMI)
-#define TMUX_PREFIX LCK(F)
-
-ZMK_TAP_DANCE(leader,
-  tapping-term-ms = <TAP_DANCE_TAPPING_TERM_MS>;
-  bindings = <TMUX_PREFIX>, <VIM_LEADER>;
-)
