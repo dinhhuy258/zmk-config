@@ -1,4 +1,5 @@
 #define HRM_TAPPING_TERM_MS 280
+#define HRM_TAPPING_TERM_MS_FAST 200
 #define HRM_QUICK_TAP_MS 175
 #define HRM_PRIOR_IDLE 150
 
@@ -13,10 +14,22 @@
     hold-trigger-on-release; \
   )
 
+#define MAKE_SHIFT_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
+  ZMK_HOLD_TAP(NAME, \
+    flavor = "balanced"; \
+    tapping-term-ms = <HRM_TAPPING_TERM_MS_FAST>; \
+    quick-tap-ms = <HRM_QUICK_TAP_MS>; \
+    require-prior-idle-ms = <HRM_PRIOR_IDLE>; \
+    bindings = <HOLD>, <TAP>; \
+    hold-trigger-key-positions = <TRIGGER_POS>; \
+  )
+
 MAKE_HRM(hrm_left, &kp, &kp, KEYS_R THUMBS)
 MAKE_HRM(hrm_right, &kp, &kp, KEYS_L THUMBS)
+MAKE_SHIFT_HRM(hrm_shift_left, &kp, &kp, KEYS_R THUMBS)
+MAKE_SHIFT_HRM(hrm_shift_right, &kp, &kp, KEYS_L THUMBS)
 
-#define hrm_left(k1, k2, k3, k4, k5)                                               \
-  &hrm_left LGUI k1 &hrm_left LALT k2 &hrm_left LCTRL k3 &hrm_left LSHFT k4 &hrm_left LC(LS(LA(LGUI))) k5
-#define hrm_right(k1, k2, k3, k4, k5)                                               \
-  &hrm_right LC(LS(LA(LGUI))) k1 &hrm_right LSHFT k2 &hrm_right LCTRL k3 &hrm_right LALT k4 &hrm_right LGUI k5
+#define HRML(k1, k2, k3, k4, k5)                                               \
+  &hrm_left LGUI k1 &hrm_left LALT k2 &hrm_left LCTRL k3 &hrm_shift_left LSHFT k4 &hrm_left LC(LS(LA(LGUI))) k5
+#define HRMR(k1, k2, k3, k4, k5)                                               \
+  &hrm_right LC(LS(LA(LGUI))) k1 &hrm_shift_right LSHFT k2 &hrm_right LCTRL k3 &hrm_right LALT k4 &hrm_right LGUI k5
