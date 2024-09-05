@@ -38,6 +38,7 @@
 #define VOL_MUTE &kp C_MUTE
 
 #define TMUX_PREFIX LCK(F)
+#define VIM_LEADER KP(SEMI)
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -114,8 +115,8 @@ ZMK_LAYER(symbol,
 
 ZMK_LAYER(number,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │  -       │  7       │  8       │  9       │  +       │   │          │          │          │          │  %       │          │
-      _LTX       KP(MINUS)  KP(N7)     KP(N8)     KP(N9)    KP(PLUS)        XXX        XXX        XXX        XXX        KP(PRCNT)  _RTX
+  //│          │  -       │  7       │  8       │  9       │  +       │   │          │Vim leader│          │          │  %       │          │
+      _LTX       KP(MINUS)  KP(N7)     KP(N8)     KP(N9)    KP(PLUS)        XXX       VIM_LEADER  XXX        XXX        KP(PRCNT)  _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │  \       │  4       │  5       │  6       │  *       │   │          │  Shift   │  Control │  Alt     │  Command │          │
       _LMX       KP(BSLH)   KP(N4)     KP(N5)     KP(N6)    KP(STAR)        XXX        KP(LSHFT)  KP(LCTRL)  KP(LALT)   KP(LGUI)   _RMX
