@@ -8,9 +8,18 @@ manifest:
       url-base: https://github.com/urob
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
+    - name: dinhhuy258
+      url-base: https://github.com/dinhhuy258
   projects:
+    # This commit https://github.com/zmkfirmware/zmk/commit/c5cca5b34f53263892257460acf681ffa490a240 causes my build to fail.
+    # Temporarily using my forked version to bypass the build failure.
+    #
+    # - name: zmk
+    #   remote: zmkfirmware
+    #   revision: main
+    #   import: app/west.yml
     - name: zmk
-      remote: zmkfirmware
+      remote: dinhhuy258
       revision: main
       import: app/west.yml
     - name: zmk-helpers
