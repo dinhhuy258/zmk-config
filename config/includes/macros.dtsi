@@ -6,9 +6,3 @@ ZMK_MACRO(vim_quit,
   tap-ms = <MACRO_TAP_MS>;
   bindings = <&kp COLON &kp Q &kp EXCL>;
 )
-
-ZMK_MACRO(dir_up,
-  wait-ms = <MACRO_WAIT_MS>;
-  tap-ms = <MACRO_TAP_MS>;
-  bindings = <&kp DOT &kp DOT &kp FSLH>;
-)
