@@ -79,7 +79,7 @@ ZMK_LAYER(navigation,
   //│          │ Vol down │ Vol up   │ Vol mute │Tmux Pre  │          │   │ Nav left │ Vim left │ Vim right│ Nav right│ Cmd + `  │          │
       _LBX       VOL_DOWN   VOL_UP     VOL_MUTE TMUX_PREFIX  XXX            KP(F23)    LSK(LEFT)  LSK(RIGHT) KP(F24)   LGK(GRAVE)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       _LHX       ___        ___            ___       &caps_word  _RHX
+                                       _LHX       ___        ___            ___        ___        _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 )
 
