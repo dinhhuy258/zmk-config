@@ -85,8 +85,8 @@ ZMK_LAYER(navigation,
 
 ZMK_LAYER(mouse,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │          │ Max speed│ Low speed│ Med speed│          │   │          │          │          │          │          │          │
-      _LTX       XXX        LGK(F14)   LGK(F15)   LGK(F16)   XXX            XXX        XXX        XXX         XXX       XXX        _RTX
+  //│          │          │          │ Low speed│ Max speed│          │   │          │          │          │          │          │          │
+      _LTX       XXX                   LGK(F15)   LGK(F16)   XXX            XXX        XXX        XXX         XXX       XXX        _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │ Command  │ Alt      │ Control  │ Shift    │          │   │Mouse left│Mouse down│Mouse up  │Mouse r...│ Cmd + Tab│          │
       _LMX       KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX          &kp LG(F24) &kp LG(F23) &kp LG(F22) &kp LG(F21) LGK(TAB) _RMX
