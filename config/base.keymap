@@ -85,11 +85,11 @@ ZMK_LAYER(navigation,
 
 ZMK_LAYER(mouse,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │          │          │          │          │          │   │          │          │          │          │          │          │
-      _LTX       XXX        XXX        XXX        XXX        XXX            XXX        XXX        XXX         XXX       XXX        _RTX
+  //│          │          │ Max speed│ Low speed│ Med speed│          │   │          │          │          │          │          │          │
+      _LTX       XXX        LGK(F14)   LGK(F15)   LGK(F16)   XXX            XXX        XXX        XXX         XXX       XXX        _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │          │ Max speed│ Low speed│ Med speed│          │   │Mouse left│Mouse down│Mouse up  │Mouse r...│ Cmd + Tab│          │
-      _LMX       XXX        LGK(F14)   LGK(F15)   LGK(F16)   XXX          &kp LG(F24) &kp LG(F23) &kp LG(F22) &kp LG(F21) LGK(TAB) _RMX
+  //│          │ Command  │ Alt      │ Control  │ Shift    │          │   │Mouse left│Mouse down│Mouse up  │Mouse r...│ Cmd + Tab│          │
+      _LMX       KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX          &kp LG(F24) &kp LG(F23) &kp LG(F22) &kp LG(F21) LGK(TAB) _RMX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   //│          │          │          │          │          │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
       _LBX       XXX        XXX        XXX        XXX        XXX            LGK(F20)   LGK(F19)    LGK(F18)  LGK(F17)  LGK(GRAVE)  _RBX
