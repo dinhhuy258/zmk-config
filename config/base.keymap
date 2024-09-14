@@ -94,7 +94,7 @@ ZMK_LAYER(mouse,
   //│          │          │          │          │          │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
       _LBX       XXX        XXX        XXX        XXX        XXX            LGK(F20)   LGK(F19)    LGK(F18)  LGK(F17)  LGK(GRAVE)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       _LHX       ___        ___            LGK(F13)   &mkp RCLK  _RHX
+                                       _LHX       ___        ___            &mkp LCLK  &mkp RCLK  _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 )
 
