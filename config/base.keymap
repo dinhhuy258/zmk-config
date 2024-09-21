@@ -115,14 +115,14 @@ ZMK_LAYER(symbol,
 
 ZMK_LAYER(number,
   //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-  //│          │  -       │  7       │  8       │  9       │  +       │   │          │Vim leader│          │          │  %       │          │
-      _LTX       KP(MINUS)  KP(N7)     KP(N8)     KP(N9)    KP(PLUS)        XXX       VIM_LEADER  XXX        XXX        KP(PRCNT)  _RTX
+  //│          │          │  7       │  8       │  9       │          │   │          │Vim leader│          │          │          │          │
+      _LTX       XXX        KP(N7)     KP(N8)     KP(N9)     XXX            XXX       VIM_LEADER  XXX        XXX        XXX        _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │  \       │  4       │  5       │  6       │  *       │   │          │  Shift   │  Control │  Alt     │  Command │          │
-      _LMX       KP(BSLH)   KP(N4)     KP(N5)     KP(N6)    KP(STAR)        XXX        KP(LSHFT)  KP(LCTRL)  KP(LALT)   KP(LGUI)   _RMX
+  //│          │          │  4       │  5       │  6       │          │   │          │  Shift   │  Control │  Alt     │  Command │          │
+      _LMX       XXX        KP(N4)     KP(N5)     KP(N6)     XXX            XXX        KP(LSHFT)  KP(LCTRL)  KP(LALT)   KP(LGUI)   _RMX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │  0       │  1       │  2       │  3       │  =       │   │          │Tmux pre  │  ,       │  .       │  /       │          │
-      _LBX       KP(N0)     KP(N1)     KP(N2)     KP(N3)     KP(EQUAL)      XXX      TMUX_PREFIX  KP(COMMA)  KP(DOT)    KP(SLASH)  _RBX
+  //│          │  0       │  1       │  2       │  3       │          │   │          │Tmux pre  │  ,       │  .       │          │          │
+      _LBX       KP(N0)     KP(N1)     KP(N2)     KP(N3)     XXX            XXX      TMUX_PREFIX  KP(COMMA)  KP(DOT)    XXX        _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        _LHX       ___        ___            ___        ___        _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
