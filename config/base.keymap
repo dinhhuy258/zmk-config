@@ -43,10 +43,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #include "zmk-helpers/helper.h"
 
+#include "includes/mouse.dtsi"
 #include "includes/macros.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/mods.dtsi"
@@ -88,13 +88,13 @@ ZMK_LAYER(mouse,
   //│          │          │          │ Low speed│ Max speed│          │   │          │          │          │          │          │          │
       _LTX       XXX        XXX        LGK(F15)   LGK(F16)   XXX            XXX        XXX        XXX         XXX       XXX        _RTX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │ Command  │ Alt      │ Control  │ Shift    │          │   │Mouse left│Mouse down│Mouse up  │Mouse r...│ Cmd + Tab│          │
-      _LMX       KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX          &kp LG(F24) &kp LG(F23) &kp LG(F22) &kp LG(F21) LGK(TAB) _RMX
+  //│          │ Command  │ Alt      │ Control  │ Shift    │          │   │          │          │          │          │ Cmd + Tab│          │
+      _LMX       KP(LGUI)   KP(LALT)   KP(LCTRL)  KP(LSHFT)  XXX           MOUSE_LEFT MOUSE_DOWN  MOUSE_UP  MOUSE_RIGHT LGK(TAB)  _RMX
   //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  //│          │          │          │          │          │          │   │Wheel left│Wheel down│ Wheel up │Wheel r...│ Cmd + `  │          │
-      _LBX       XXX        XXX        XXX        XXX        XXX            LGK(F20)   LGK(F19)    LGK(F18)  LGK(F17)  LGK(GRAVE)  _RBX
+  //│          │          │          │          │          │          │   │          │          │          │          │ Cmd + `  │          │
+      _LBX       XXX        XXX        XXX        XXX        XXX           WHEEL_LEFT WHEEL_DOWN  WHEEL_UP  WHEEL_RIGHT LGK(GRAVE)  _RBX
   //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       _LHX       ___        ___            &mkp LCLK  &mkp RCLK  _RHX
+                                       _LHX       ___        ___           LEFT_CLICK RIGHT_CLICK _RHX
   //                                 ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 )
 

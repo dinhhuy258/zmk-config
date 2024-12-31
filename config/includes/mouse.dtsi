@@ -1,0 +1,27 @@
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 120  // 10
+
+#include <dt-bindings/zmk/pointing.h>
+
+&mmv {
+  acceleration-exponent = <1>;          // 1
+  time-to-max-speed-ms = <500>;         // 300
+  delay-ms = <0>;                       // 0
+};
+
+&msc {
+  acceleration-exponent = <1>;          // 0
+  time-to-max-speed-ms = <800>;         // 300
+  delay-ms = <0>;                       // 0
+};
+
+#define MOUSE_UP &mmv MOVE_UP
+#define MOUSE_DOWN &mmv MOVE_DOWN
+#define MOUSE_LEFT &mmv MOVE_LEFT
+#define MOUSE_RIGHT &mmv MOVE_RIGHT
+#define WHEEL_UP &msc SCRL_UP
+#define WHEEL_DOWN &msc SCRL_DOWN
+#define WHEEL_LEFT &msc SCRL_LEFT
+#define WHEEL_RIGHT &msc SCRL_RIGHT
+#define LEFT_CLICK &mkp LCLK
+#define RIGHT_CLICK &mkp RCLK
